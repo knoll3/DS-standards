@@ -2,7 +2,7 @@ class FramingsController < ApplicationController
   require 'framings_helper'
   
   def index
-    @framings = Framing.all
+    @framings = Framing.all.sort_by &:coserv
     @framing = Framing.new
     @first = Framing.first
   end

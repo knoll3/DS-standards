@@ -21,11 +21,10 @@
           <tr>
             <% framing.attributes.each do |column_name, value| %>
               <% if is_useful_column_name column_name %>
-                <td><%= value  %></td>
+                <td style='white-space:pre-wrap;' ><%= value  %></td>
               <% end %>
             <% end %>
-            <td><%= button_to 'delete', framing_path(framing), :method => :delete %></td>
-            <td><%= button_to 'edit', framing_path(framing), :method => :delete %></td>
+            <td><%= button_to 'Remove', framing_path(framing), :method => :delete %></td>
           </tr>
         <% end %>
         <tr>
@@ -33,13 +32,13 @@
             <% Framing.column_names.each do |column_name| %>
               <% if is_useful_column_name column_name %>
                 <% if column_name == 'desc' %>
-                  <td><%= f.text_area column_name, rows: '4',  class: 'form-control' %></td>
+                  <td><%= f.text_area column_name, rows: '4', class: 'form-control' %></td>
                 <% else %>
                   <td><%= f.text_field column_name, class: 'form-control' %></td>
                 <% end %>
               <% end %>
             <% end %>
-            <td><%= f.submit "Submit", class: "btn btn-primary" %></td>
+            <td><%= f.submit "Add", class: "btn btn-primary" %></td>
           <% end %>
         </tr>        
       </tbody>
