@@ -1,4 +1,4 @@
-module FramingHelper
+module FramingsHelper
 
   def is_useful_column_name column_name
     nonuseful_column_names = %w[ id 

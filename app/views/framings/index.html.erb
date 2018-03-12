@@ -1,4 +1,4 @@
-<h1>Framing#index</h1>
+<h1>Framings#index</h1>
 <p>Find me in app/views/framing/index.html.erb</p>
 
 <div class="row">
@@ -25,7 +25,22 @@
             <% end %>
           </tr>
         <% end %>
+        <tr>
+          <%= form_for(@framing) do |f| %>
+            <% Framing.column_names.each do |column_name| %>
+              <% if is_useful_column_name column_name %>
+                <% if column_name == 'desc' %>
+                  <td><%= f.text_area column_name,  class: 'form-control' %></td>
+                <% else %>
+                  <td><%= f.text_field column_name, class: 'form-control' %></td>
+                <% end %>
+              <% end %>
+            <% end %>
+            <td><%= f.submit "Submit", class: "btn btn-primary" %></td>
+          <% end %>
+        </tr>        
       </tbody>
     </table>
   </div>
+</div>
   
