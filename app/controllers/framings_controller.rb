@@ -4,6 +4,7 @@ class FramingsController < ApplicationController
   def index
     @framings = Framing.all
     @framing = Framing.new
+    @first = Framing.first
   end
 
   def show
@@ -12,6 +13,12 @@ class FramingsController < ApplicationController
   def create
     framing = Framing.new(framing_params)
     framing.save
+    redirect_to root_path
+  end
+  
+  def destroy
+    framing = Framing.find(params[:id])
+    framing.destroy!
     redirect_to root_path
   end
   
