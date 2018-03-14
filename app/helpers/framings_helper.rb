@@ -7,4 +7,8 @@ module FramingsHelper
                              ]
     !nonuseful_column_names.include?(column_name) 
   end
+  
+  def hello
+    return 'Hello, World!'
+  end
 end
