@@ -23,6 +23,14 @@ textarea {
     overflow-y: scroll;
 }
 
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #eee;
+}
+
+tr {
+  cursor: pointer;
+}
+
 td {
   text-align: center;
 }
@@ -32,4 +40,20 @@ td {
   font-style: italic;
   text-transform: lowercase;
   text-transform: capitalize;
+}
+
+#myCarousel {
+  text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px; 
+ }
+ 
+#myCarousel {
+  width: 700px;
+  height: 775px;
 }
