@@ -1,20 +1,627 @@
 desc,coserv,oncor,tnmp,trinity_valley
 "single phase
-0° to 5° angle",HELLO!,108-205,OH-6-100,VA1
+single primary support",VA1,108-205,OH-6-100,VA1
 "single phase
-double support
-0° to 5° angle",VA1-1,108-220,OH-6-110,VA1-1
-"SINGLE PHASE 
-MEDIUM ANGLE
-DOUBLE SUPPORT
-5° TO 30° ANGLE",VA2,108-220,OH-6-110,VA2
-"SINGLE PHASE
-VERTICAL
-30° TO 60° ANGLE",VA3,108-230,OH-6-115,VA3
-"SINGLE PHASE
-VERTICAL
-DEADEND ANGLE
-60° TO 90°",VA4,108-245,OH-6-130,VA4
-"SINGLE PHASE
-VERTICAL
-DEAD END",VA5,108-235,OH-6-120,VA5
+single primary support",VA1,108-210,OH-6-105,VA1
+"single phase
+single primary support",VA1,108-215,-,VA1
+"single phase
+double primary support",VA1-1,108-820,-,VA1-1
+"single phase
+double primary support
+double support neutral",-,-,-,VA1-2
+"single phase
+medium angle",VA2,108-220,OH-6-110,VA2
+"single phase
+medium angle
+double neutral support",-,-,-,VA2-3
+"single phase
+vertical
+large angle",VA3,108-230,OH-6-115,VA3
+"single phase
+vertical tap
+stand off bracket
+reduced tension",VA3S,108-260,OH-6-145,-
+"single phase
+vertical
+deadend angle",VA4,108-245,OH-6-130,VA4
+"single phase
+vertical
+deadend",VA5,108-235,OH-6-120,VA5
+"single phase
+tap with tension
+from 1ph line",VA5-1,108-250,OH-6-135,VA5-1
+"single phase
+four way junction",-,108-255,OH-6-140,-
+"single phase
+four way junction
+deadend",-,108-256,OH-6-141,-
+"single phase
+tap with tension
+from 3ph line",VA5-2,108-357,OH-6-240,-
+"single phase
+tap with tension
+from 3ph narrow profile",VA5-2N,-,-,VA5-2N
+"single phase
+tap with reduced tension
+from 3ph line",VA5-2S,108-358,OH-6-245,-
+"single phase
+tap with tension
+from 1ph deadend",VA5-4,-,-,VA5-4
+"single phase
+tap with reduced tension
+from 1ph deadend
+90 angle",-,108-265,OH-6-150,-
+"single phase
+tap with reduced tension
+from 1ph deadend",-,108-265,OH-6-151,-
+"single phase
+vertical 
+double deadend
+(no feed through)",-,-,-,VA6
+"single phase
+vertical 
+double deadend",VA6,108-240,OH-6-125,VA6-1
+"single phase
+double deadend with guy
+long span feeder crossing",-,108-825,,
+"single phase
+crossarm
+deadend",VA7,-,-,VA7
+"single phase
+three crossarms
+deadend",VA7-1-R,-,-,-
+"single phase
+crossarm
+deadend",VA7A-R,-,-,-
+"single phase
+crossarm
+1ph tap for 
+reduced tension deadend",VA7S,-,-,-
+"single phase
+crossarm
+dead takeoff for
+span with tension (no pins)",,-,-,VA7X
+"single phase
+crossarm
+dead takeoff for
+span with tension",VA7X,-,-,VA7X-1
+"single phase
+crossarm
+dead takeoff for
+span with reduced tension",VA7XS,-,-,-
+"single phase
+crossarm
+double deadend",VA8,-,-,VA8
+"single phase
+crossarm
+double deadend",VA8A-R,-,-,-
+"single phase
+crossarm
+double primary support
+",VA9,-,-,VA9
+"single phase
+crossarm
+single primary support",VA9-1,-,-,-
+"single phase
+crossarm
+single primary support
+with guy",VA9-1,-,-,VA9-1
+"single phase
+shield
+tangent",-,-,OH-6-500,-
+"single phase
+shield
+deadend",-,-,OH-6-505,-
+"two phase
+crossarm
+single primary support",VB1,-,-,VB1
+"two phase
+crossarm
+single primary support
+less neutral",VB1-LN,-,-,-
+"two phase
+crossarm
+10' single primary support",VB1-10,-,-,-
+"two phase
+crossarm
+10' single primary support
+less neutral",VB1-10-LN,-,-,-
+"two phase
+narrow profile
+single primary support",VB1N,-,-,VB1N
+"two phase
+crossarm
+double primary support
+",VB1-1,-,-,VB1-1
+"two phase
+crossarm
+double primary support
+less neutral",VB1-1-LN,-,-,-
+"two phase
+crossarm 
+10' double primary support",VB1-1-10,-,-,-
+"two phase
+crossarm 
+10' double primary support
+less neutral",VB1-1-10-LN,-,-,-
+"two phase
+crossarm
+single primary support
+large conductors",VB1-2,-,-,-
+"two phase
+crossarm
+single primary support
+large conductors - less neutral",VB1-2-LN,-,-,-
+"two phase
+crossarm
+10' single primary support
+large conductors",VB1-2-10,-,-,-
+"two phase
+crossarm
+10' single primary support
+large conductors - less neutral",VB1-2-10-LN,-,-,-
+"twophase
+crossarm 
+double primary support
+large conductor",VB1-3,-,-,-
+"two phase
+crossarm
+dougle primary support
+large conductor - less neutral",VB1-3-LN,-,-,-
+"two phase
+crossarm 
+10' double primary support
+large conductor",VB1-3-10,-,-,-
+"two phase
+crossarm
+10' double primary support
+large conductor - less neutral",VB1-3-10-LN,-,-,-
+"two phase
+crossarm
+double primary support
+medium angle",VB2,-,-,VB2
+"two phase
+crossarm
+double primary support
+medium angle - less neutral",VB2-LN,-,-,-
+"two phase
+crossarm
+10' double primary support
+medium angle",VB2-10,-,-,-
+"two phase
+crossarm
+10' double primary support
+medium angle - less neutral",VB2-10-LN,-,-,-
+"two phase
+vertical
+large angle
+",VB3,-,-,VB3
+"two phase
+vertical
+single primary support
+reduced tension",VB3S,-,-,-
+"two phase
+vertical
+deadend angle
+heavy angle",VB4-1,-,-,VB4-1
+"two phase
+vertical
+deadend",VB5,-,-,VB5-1
+"two phase
+crossarm
+deadend",VB7,-,-,VB7
+"two phase
+crossarm
+deadend - less neutral",VB7-LN,-,-,-
+"two phase
+three crossarm
+deadend - retire only",VB7-1-R,-,-,VAB7-1
+"two phase
+crossarm
+deadend - retire only",VB7A-R,-,-,-
+"two phase
+crossarm
+deadend - less neutral - retire only",VB7A-LN-R,-,-,-
+"two phase
+crossarm
+deadend takeoff for
+span with tension",VB7X,-,-,VB7X
+"two phase
+crossarm with pin insulators
+deadend takeoff for
+span with tension","VB7X, VM5-5",-,-,VB7X-1
+"two phase
+crossarm
+deadend takeof for 
+span with tension - less neutral",VB7X-LN,-,-,-
+"two phase
+crossarm 
+deadend takeoff for 
+span with reduced tension",VB7XS,-,-,-
+"two phase
+crossarm
+deadend takeoff for span
+with reduced tension - less neutral",VB7XS-LN,-,-,-
+"two phase
+crossarm
+double deadend","VB7, VB7X",-,-,VB8
+"two phase
+crossarm 
+double primary support",VB9,-,-,VB9
+"two phase
+crossarm
+single primary support",VB9-1,-,-,VB9-1
+"three phase
+crossarm
+single primary support
+",VC1,108-305,OH-6-200,VC1
+"three phase
+crossarm
+single primary support
+stabilized",VC1,108-310,-,-
+"three phase
+crossarm
+single primary support
+light angle",VC1,108-315,OH-6-205,-
+"three phase
+crossarm
+single primary support
+less neutral",VC1-LN,-,-,-
+"three phase
+crossarm
+10' single primary support",VC1-10,-,-,-
+"three phase
+crossarm
+10' single primary support
+less neutral",VC1-10-LN,-,-,-
+"three phase
+narrow profile
+single primary support",VC1N,108-505,OH-6-400,VC1N
+"three phase
+narrow profile
+single primary support
+stabilized",VC1N,108-510,-,-
+"three phase
+narrow profile
+single primary support
+light angle",VC1N,108-515,OH-6-405,-
+"three phase
+crossarm
+double primary support",VC1-1,108-830,-,VC1-1
+"three phase
+crossarm
+double primary support",VC1-1-LN,-,-,-
+"three phase
+crossarm
+10' double primary support",VC1-1-10,-,-,-
+"three phase
+crossarm
+10' double primary support
+less neutral",VC1-1-10-LN,-,-,-
+"three phase
+narrow profile
+double primary support",VC1-1N,108-595,-,VC1-1N
+"three phase
+narrow profile
+double primary support
+less neutral",VC1-1N-LN,-,-,-
+"three phase
+crossarm 
+large conductor
+single primary support",VC1-2,-,-,VC1-2
+"three phase
+crossarm 
+large conductor
+single primary support - less neutral",VC1-2-LN,-,-,-
+"three phase
+crossarm
+large conductor
+10' single primary support",VC1-2-10,-,-,-
+"three phase
+crossarm
+large conductor
+10' single primary support - less neutral",VC1-2-10-LN,-,-,-
+"three phase
+crossarm
+large conductor
+double primary support",VC1-3,-,-,VC1-3
+"three phase
+crossarm
+large conductor
+double primary support - less neutral",VC1-3-LN,-,-,-
+"three phase
+double crossarm
+large conductor
+10' double primary support",VC1-3-10,-,-,-
+"three phase
+double crossarm
+large conductor
+10' double primary support - less neutral",VC1-3-10-LN,-,-,-
+"three phase
+crossarm 
+large conductor
+single primary suppport - light angle",VC1-4-R,-,-,VC1-4
+"three phase
+shield double crossarm
+tangent",-,-,-,VC1-5
+"three phase
+crossarm
+double primary support
+medium angle",VC2,108-320,OH-6-210,VC2
+"three phase
+crossarm
+double primary support
+medium angle - less neutral",VC2-LN,-,-,-
+"three phase
+narrow profile
+double primary support
+medium angle",VC2N,108-520,OH-6-410,VC2N
+"three phase
+narrow profile
+double deadend
+heavy angle",-,108-525,OH-6-415,-
+"three phase
+narrow profile - double arm
+double deadend
+heavy angle",-,108-530,OH-6-420,-
+"three phase
+narrow profile
+double primary support
+medium angle - less neutral",VC2N-LN,-,-,-
+"three phase
+crossarm construction
+double primary support
+medium angle",VC2-1,-,-,VC2-1
+"three phase
+crossarm construction
+double primary support
+medium angle - less neutral",VC2-1-LN,-,-,-
+"three phase
+double crossarm
+double primary support
+medium angle",VC2-2,-,-,VC2-2
+"three phase
+crossarm
+double deadend
+large angle",-,108-330,OH-6-215,-
+"three phase
+vertical
+large angle",VC3,108-430,OH-6-300,-
+"three phase
+vertical
+singple primary support
+reduced tension",VC3S,-,-,-
+"three phase
+vertical
+deadend angle
+heavy angle",VC4-1,108-445,OH-6-310,VC4-1
+"three phase
+vertical
+deadend angle
+heavy angle",-,-,-,VC4-1L
+"three phase
+vertical
+deadend",-,108-435,OH-6-305,VC5-1
+"three phase
+vertical
+deadend
+large conductor",-,-,-,VC5-1L
+"three phase
+vertical
+deadend with
+in line slack span tap",-,108-465,OH-6-315,-
+"three phase
+vertical
+deadend with
+slack span tap",-,108-470,OH-6-320,-
+"three phase
+vertical
+double slack span",-,108-475,OH-6-235,-
+"three phase
+crossarm
+single deadend",VC7,108-335,OH-6-220,VC7
+"three phase
+narrow profile
+single primary deadend",VC7N,108-535,OH-6-425,VC7N
+"three phase
+crossarm
+small conductor
+single primary deadend ",VC7A-R,-,-,VC7A
+"three phase
+crossarm
+large conductor
+single primary deadend",VC7A-L-R,-,-,VC7A-L
+"three phase 
+crossarm
+small conductor
+10' single primary deadend",VC7A-10-R,-,-,VC7A-10
+"three phase
+crossarm
+3ph tap takeoff for
+reduced tension deadend",VC7S,108-355,OH-6-236,-
+"three phase
+crossarm
+corner - 90 angle",-,108-345,OH-6-230,-
+"three phase
+narrow profile
+four way crossing",-,108-555,OH-6-445,-
+"three phase
+narrow profile
+1ph slack span
+tangent",-,108-558,OH-6-450,-
+"three phase
+narrow profile
+2 or 3 phase slack span
+tangent",-,108-560,OH-6-455,-
+"three phase
+narrow profile
+slack span from deadend",-,108-565,OH-6-460,-
+"three phase
+narrow profile
+1, 2, or 3 phase slack span
+from deadend",-,108-570,OH-6-465,-
+"three phase 
+10' crossarm
+3ph tap takeoff for 
+reduced tension deadend",VC7S-10,-,-,-
+"three phase
+crossarm
+extension from deadend",VC7X,108-340,OH-6-225,VC7X
+"three phase
+crossarm
+double deadend
+with pin insulator",-,-,-,VC7X-1
+"three phase
+crossarm
+double deadend",VC7X,108-340,OH-6-225,VC8
+"three phase
+crossarm
+double deadend
+phases on arm",-,-,-,VC8-1
+"three phase
+crossarm
+double deadend
+large conductor",-,-,-,VC8-2
+"three phase
+crossarm
+double deadend
+large conductor with guy",-,-,-,VC8-3
+"three phase
+crossarm
+deadend takeoff for
+span with tension - less neutral",VC7X-LN,-,-,-
+"three phase
+crossarm
+deadend takeoff for
+span with reduced tension",VC7XS,-,-,-
+"three phase
+crossarm
+deadend takeoff for
+span with reduced tension","VC7, VC7XS",108-365,OH-6-255,-
+"three phase
+crossarm
+deadend tap for  span
+with reduced tension
+",-,108-370,-,-
+"three phase
+three crossarms
+single deadend - retired",VC7-1-R,-,-,-
+"three phase
+crossarm
+double deadend
+with guy",-,108-835,-,-
+"three phase
+crossarm
+3ph tap with tension","VC1, VC7",108-350,OH-6-235,-
+"three phase
+crossarm
+3ph tap with reduced tension",-,108-360,OH-6-250,-
+"three phase
+narrow profile
+90 angle corner",-,108-545,OH-6-435,-
+"three phase
+narrow profile
+3ph tap with tension",-,108-550,OH-6-440,-
+"three phase
+crossarm
+double deadend",VC8A-R,-,-,VC8A
+"three phase
+crossarm
+double deadend
+with pin insulator",-,-,-,VC8A-1
+"three phase
+crossarm
+double deadend
+large conductor",VC8A-L-R,-,-,VC8A-L
+"three phase
+crossarm
+double deadend
+large conductor",-,-,-,VC8A-L1
+"three phase
+narrow profile
+double deadend",VC8N,108-540,OH-6-430,VC8N
+"three phase
+crossarm
+double primary support",VC9,-,-,VC9
+"three phase
+crossarm
+single primary support",VC9-1,-,-,VC9-1
+"three phase
+crossarm
+double primary support",VC9-2,-,-,VC9-2
+"three phase
+crossarm
+double primary support
+very light angle - less neutral",VC9-2-LN,-,-,-
+"three phase
+crossarm
+single primary support
+large conductors",VC9-3,-,-,VC9-3
+"three phase
+crossarm
+single primary support
+large conductors - less neutral",VC9-3-LN,-,-,-
+"three phase
+alley arm
+double primary support",VC33-7,108-375,-,-
+"electrode pole top
+and gap system for 
+crossarm consctruction",-,108-372,-,-
+"crossarm construction
+floating taps",???,108-380,-,-
+"three phase
+shield crossarm
+tangent",-,108-705,OH-6-510,-
+"three phase
+shield crossarm
+single primary support
+light angle",-,108-715,OH-6-515,-
+"three phase
+shield crossarm
+double primary support
+medium angle",-,108-720,OH-6-520,-
+"three phase
+shield crossarm
+double deadend angle
+heavy angle",-,108-730,-,-
+"three phase
+shield vertical
+heavy angle",-,108-732,OH-6-535,-
+"three phase
+shield crossarm
+deadend",-,108-735,-,-
+"three phase
+shield crossarm
+double deadend",-,108-742,OH-6-525,-
+"three phase
+shield vertical
+deadend with 
+slack span corner",-,108-745,-,-
+"three phase
+shield crossarm
+1ph tap with tension",-,108-757,-,-
+"three phase
+shield crossarm
+3ph tap with reduced tension",-,108-760,-,-
+"three phase
+shield crossarm
+deadend corner",-,-,OH-6-530,-
+"three phase
+shield narrow profile
+tangent",-,-,OH-6-540,-
+"three phase
+shield narrow profile
+deadend",-,-,OH-6-545,-
+"three phase
+shield crossarm
+double primary support
+highway crossing",-,108-832,-,-
+"three phase
+shield crossarm
+double deadend
+with guy",-,108-837,-,-
+"three phase
+crossarm
+long span feeder
+neutral low",-,108-840,-,-

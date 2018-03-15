@@ -1,3 +1,6 @@
+# $ rake db:reset db:migrate
+# Loads framing.csv into the db
+
 require 'csv'
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'framings.csv'))

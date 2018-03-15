@@ -1,48 +1,81 @@
 <h1>Framings#index</h1>
 <p>Find me in app/views/framing/index.html.erb</p>
 
-<div class="row">
-  <div class="col-md-6">
-    <input class="form-control" id="myInput" type="text" placeholder="Search..">
-    <br>
-    <table class="table table-bordered table-striped">
-      <thead>
-        <tr>
-          <% Framing.column_names.each do |column_name| %>
-            <% if is_useful_column_name column_name %>
-              <th><%= column_name %></th>
-            <% end %>
-          <% end %>
-        </tr>
-      </thead>
-      <tbody id="myTable">
-        <% @framings.each do |framing| %>
-        
-          <tr>
-            <% framing.attributes.each do |column_name, value| %>
-              <% if is_useful_column_name column_name %>
-                <td style='white-space:pre-wrap;' ><%= value  %></td>
-              <% end %>
-            <% end %>
-            <td><%= button_to 'Remove', framing_path(framing), :method => :delete %></td>
-          </tr>
-        <% end %>
-        <tr>
-          <%= form_for(@framing) do |f| %>
-            <% Framing.column_names.each do |column_name| %>
-              <% if is_useful_column_name column_name %>
-                <% if column_name == 'desc' %>
-                  <td><%= f.text_area column_name, rows: '4', class: 'form-control' %></td>
-                <% else %>
-                  <td><%= f.text_field column_name, class: 'form-control' %></td>
+<div class="container"></div>
+  <div class="row">
+    <div class="col-md-6">
+      <input class="form-control" id="myInput" type="text" placeholder="Search..">
+      <br>
+      <div id="table-wrapper">
+        <table class="table table-bordered table-striped" id="table">
+          <thead>
+            <tr>
+              <% Framing.column_names.each do |column_name| %>
+                <% if is_useful_column_name column_name %>
+                  <th><%= column_name %></th>
                 <% end %>
               <% end %>
+            </tr>
+          </thead>
+          
+          <tbody id="myTable">
+            <% @framings.each do |framing| %>
+              <tr>
+                <% framing.attributes.each do |column_name, value| %>
+                  <% if is_useful_column_name column_name %>
+                    <td style='white-space:pre-wrap' class="col-md-2" id=<%= "value-#{column_name}" %>><%= value  %></td>
+                  <% end %>
+                <% end %>
+              </tr>
             <% end %>
-            <td><%= f.submit "Add", class: "btn btn-primary" %></td>
-          <% end %>
-        </tr>        
-      </tbody>
-    </table>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Image Slide -->
+    <div class="col-md-6">
+      <h2>Standards Page</h2>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+
+          <div class="item active">
+            <h2>Coserv</h2>
+            <img src="Coserv va1.jpg" alt="Chania" width="460" height="345">
+          </div>
+
+          <div class="item">
+            <h2>Trinity Valley</h2>
+            <img src="TV va1.jpg" alt="Chania" width="460" height="345">
+          </div>
+        
+          <div class="item">
+            <h2>TNMP</h2>
+            <img src="TNMP OH-6-100.jpg" alt="Flower" width="460" height="345">
+          </div>
+
+          <div class="item">
+            <h2>Oncor</h2>
+            <img src="Oncor 108-205.jpg" alt="Flower" width="460" height="345">
+          </div>
+      
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    
+    
   </div>
 </div>
   

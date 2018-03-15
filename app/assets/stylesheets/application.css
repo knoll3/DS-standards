@@ -17,3 +17,19 @@
 textarea {
   white-space: pre-wrap;
 }
+
+#table-wrapper {  
+    height: 600px !important;
+    overflow-y: scroll;
+}
+
+td {
+  text-align: center;
+}
+
+#value-desc {
+  text-align: left;
+  font-style: italic;
+  text-transform: lowercase;
+  text-transform: capitalize;
+}
