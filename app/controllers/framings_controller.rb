@@ -3,8 +3,7 @@ class FramingsController < ApplicationController
   
   def index
     @framings = Framing.all
-    @framing = Framing.new
-    @first = Framing.first
+    @images = Framing.first.images.all
   end
 
   def show

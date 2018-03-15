@@ -20,7 +20,7 @@
           
           <tbody id="myTable">
             <% @framings.each do |framing| %>
-                <tr onclick="location.href='https://www.google.com';" style="cursor:pointer;">
+                <tr onclick="location.href='#';" style="cursor:pointer;">
                   <% framing.attributes.each do |column_name, value| %>
                     <% if is_useful_column_name column_name %>
                       <td style='white-space:pre-wrap' class="col-md-2" id=<%= "value-#{column_name}" %>><%= value  %></td>
@@ -40,26 +40,15 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-
-          <div class="item active">
-            <h2>Coserv</h2>
-            <%= image_tag("Coserv va1.jpg", alt:"Coserv", class: "img-responsive") %>
-          </div>
-          
-          <div class="item">
-            <h2>Oncor</h2>
-            <%= image_tag("Oncor 108-205.jpg", alt:"Coserv") %>          
-          </div>
-
-          <div class="item">
-            <h2>TNMP</h2>
-            <%= image_tag("TNMP OH-6-100.jpg", alt:"Coserv") %>          
-          </div>
-          
-          <div class="item">
-            <h2>Trinity Valley</h2>
-            <%= image_tag("TV va1.jpg", alt:"Coserv") %>
-          </div>
+          <% @images.each_with_index do |image, index| %>
+            <% if index == 0 %>
+              <div class="item active">
+            <% else %>
+              <div class="item">
+            <% end %>
+              <%= image_tag(image.url, alt: image.url, class: "img-responsive") %>
+            </div>
+          <% end %>
         </div>
 
         <!-- Left and right controls -->
@@ -73,8 +62,6 @@
         </a>
       </div>
     </div>
-    
-    
   </div>
 </div>
   
