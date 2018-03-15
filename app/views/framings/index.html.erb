@@ -7,7 +7,7 @@
       <input class="form-control" id="myInput" type="text" placeholder="Search..">
       <br>
       <div id="table-wrapper">
-        <table class="table table-bordered table-striped" id="table">
+        <table class="table table-bordered table-striped table-hover" id="table">
           <thead>
             <tr>
               <% Framing.column_names.each do |column_name| %>
@@ -20,13 +20,13 @@
           
           <tbody id="myTable">
             <% @framings.each do |framing| %>
-              <tr>
-                <% framing.attributes.each do |column_name, value| %>
-                  <% if is_useful_column_name column_name %>
-                    <td style='white-space:pre-wrap' class="col-md-2" id=<%= "value-#{column_name}" %>><%= value  %></td>
+                <tr onclick="location.href='https://www.google.com';" style="cursor:pointer;">
+                  <% framing.attributes.each do |column_name, value| %>
+                    <% if is_useful_column_name column_name %>
+                      <td style='white-space:pre-wrap' class="col-md-2" id=<%= "value-#{column_name}" %>><%= value  %></td>
+                    <% end %>
                   <% end %>
-                <% end %>
-              </tr>
+                </tr>
             <% end %>
           </tbody>
         </table>
@@ -43,24 +43,23 @@
 
           <div class="item active">
             <h2>Coserv</h2>
-            <img src="Coserv va1.jpg" alt="Chania" width="460" height="345">
+            <%= image_tag("Coserv va1.jpg", alt:"Coserv", class: "img-responsive") %>
           </div>
-
-          <div class="item">
-            <h2>Trinity Valley</h2>
-            <img src="TV va1.jpg" alt="Chania" width="460" height="345">
-          </div>
-        
-          <div class="item">
-            <h2>TNMP</h2>
-            <img src="TNMP OH-6-100.jpg" alt="Flower" width="460" height="345">
-          </div>
-
+          
           <div class="item">
             <h2>Oncor</h2>
-            <img src="Oncor 108-205.jpg" alt="Flower" width="460" height="345">
+            <%= image_tag("Oncor 108-205.jpg", alt:"Coserv") %>          
           </div>
-      
+
+          <div class="item">
+            <h2>TNMP</h2>
+            <%= image_tag("TNMP OH-6-100.jpg", alt:"Coserv") %>          
+          </div>
+          
+          <div class="item">
+            <h2>Trinity Valley</h2>
+            <%= image_tag("TV va1.jpg", alt:"Coserv") %>
+          </div>
         </div>
 
         <!-- Left and right controls -->

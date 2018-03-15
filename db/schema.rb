@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180312160527) do
+ActiveRecord::Schema.define(version: 20180315205814) do
 
   create_table "framings", force: :cascade do |t|
     t.text "desc"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20180312160527) do
     t.string "trinity_valley"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "url"
+    t.integer "framing_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["framing_id"], name: "index_images_on_framing_id"
   end
 
 end
