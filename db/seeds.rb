@@ -12,3 +12,13 @@ csv.each do |row|
   end
   t.save 
 end
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'images.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+  t = Image.new
+  Image.column_names.each do |column_name|
+      t[column_name] = row[column_name] 
+  end
+  t.save 
+end
