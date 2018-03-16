@@ -1,0 +1,27 @@
+<input class="form-control" id="myInput" type="text" placeholder="Search..">
+<br>
+<div id="table-wrapper">
+<table class="table table-bordered table-striped table-hover" id="table">
+<thead>
+  <tr>
+    <% Framing.column_names.each do |column_name| %>
+      <% if is_useful_column_name column_name %>
+        <th><%= column_name %></th>
+      <% end %>
+    <% end %>
+  </tr>
+</thead>
+    
+<tbody id="myTable">
+  <% @framings.each do |framing| %>
+      <tr onclick="location.href='#';" style="cursor:pointer;">
+        <% framing.attributes.each do |column_name, value| %>
+          <% if is_useful_column_name column_name %>
+            <td style='white-space:pre-wrap' class="col-md-2" id=<%= "value-#{column_name}" %>><%= value  %></td>
+          <% end %>
+        <% end %>
+      </tr>
+  <% end %>
+</tbody>
+</table>
+</div>
