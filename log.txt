@@ -1,0 +1,89 @@
+commit a8057b206ab585689a6cf92bed37cf31f12ef4b1
+Author: Knoll <noll.kyle@gmail.com>
+Date:   Thu Mar 15 20:55:45 2018 -0500
+
+    Refactor html
+
+commit bf544a81113aac0c37f1ca858579465cd50b6152
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Thu Mar 15 21:57:02 2018 +0000
+
+    Images put into index.html
+
+commit 6180a8b478e226719ce39065af8db6a4d3f66f51
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Thu Mar 15 21:01:57 2018 +0000
+
+    Add image model
+
+commit 22a4acf798845b3d25126ea45ca405c71b97dbee
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Thu Mar 15 18:55:20 2018 +0000
+
+    CSS updates
+
+commit 6a0800d9e286cdf8628e61fa36892c08ba71a865
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Wed Mar 14 17:38:07 2018 +0000
+
+    Refactor db seed file
+
+commit dfb15443ae012137f3a68031458356322a7e8c4f
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Mon Mar 12 21:53:55 2018 +0000
+
+    include code to import csv into db
+
+commit e3dc9ab6074af604aab737f6fe855bfafb8864a4
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Mon Mar 12 20:35:50 2018 +0000
+
+    Allow line breaks
+
+commit 76a3cfaca07a5ff3761218637fa266a449962f94
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Mon Mar 12 19:41:58 2018 +0000
+
+    Add delete button
+
+commit 1c7fec57e346536b4874a8fa44faaf16b9866a76
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Mon Mar 12 17:43:09 2018 +0000
+
+    Add form for entering data
+
+commit 4d83948dfd76429a023c14b4f7bf34c33537cdbd
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Mon Mar 12 16:59:04 2018 +0000
+
+    Add working search table
+
+commit 565cac751602b0d2d20417b3f13d88b35b2c2c5c
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Mon Mar 12 16:18:48 2018 +0000
+
+    Add framing model and controller
+
+commit 9141f3287f58476b17a00068eb38e9331a69fb91
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Mon Mar 12 13:52:20 2018 +0000
+
+    Update gemfile
+
+commit c9639955b99d2aaba3509e711b881455e756b972
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Mon Mar 12 13:47:25 2018 +0000
+
+    Modify Gemfil
+
+commit dd80ed83dd4c6657ebf1aca0113afddc61c59d44
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Mon Mar 12 13:42:28 2018 +0000
+
+    Initialize Repository
+
+commit 23b8fdf12a82fc6563b5952547e5abf5a1d23a13
+Author: knoll3 <noll.kyle@gmail.com>
+Date:   Mon Mar 12 13:42:05 2018 +0000
+
+    first commit
