@@ -7,6 +7,9 @@ class FramingsController < ApplicationController
   end
 
   def show
+    @framings = Framing.all
+    @framing  = Framing.find(params[:id]) 
+    @images   = @framing.images.all
   end
   
   def create
