@@ -14,11 +14,11 @@
     
 <tbody id="myTable">
   <% @framings.each do |framing| %>
-      <tr>
+      <tr data-href="<%= framing_path(framing) %>">
         <% framing.attributes.each do |column_name, value| %>
           <% if is_useful_column_name column_name %>
             <td class="col-md-2" id=<%= "value-#{column_name}" %>>
-              <%= link_to value, framing_path(framing.id), remote: true %>
+              <%= value %>
             </td>
           <% end %>
         <% end %>
