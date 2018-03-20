@@ -16,10 +16,23 @@
     <div class="col-md-6">
       <%= render 'layouts/search' %>    
     </div> 
-    <div class="col-md-6" id="main">
-      <%= yield %>
+    <div class="col-md-6">
+      <h2>Standards</h2>
+      <div id="main">
+        <%= yield %>
+      </div>
     </div>
   </div>
+  <script>
+    $(document).on('click', 'tr', function() {
+       var link = $(this).data('href');
+       $.ajax({
+         type: 'GET',
+         dataType: 'script',
+         url: link
+       });
+    });
+  </script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
