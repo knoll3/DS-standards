@@ -4,7 +4,6 @@
 <table class="table table-bordered table-striped table-hover" id="table">
 <thead>
   <tr>
-    <th>id</th>
     <% Framing.column_names.each do |column_name| %>
       <% if is_useful_column_name column_name %>
         <th><%= column_name %></th>
@@ -16,7 +15,6 @@
 <tbody id="myTable">
   <% @framings.each do |framing| %>
       <tr onclick='location.href="<%= framing_path(framing.id) %>"' style="cursor:pointer;">
-        <td><%= framing.id %></td>
         <% framing.attributes.each do |column_name, value| %>
           <% if is_useful_column_name column_name %>
             <td style='white-space:pre-wrap' class="col-md-2" id=<%= "value-#{column_name}" %>><%= value  %></td>
