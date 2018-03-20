@@ -10,6 +10,10 @@ class FramingsController < ApplicationController
     @framings = Framing.all
     @framing  = Framing.find(params[:id]) 
     @images   = @framing.images.all
+    respond_to do |f|
+      f.html
+      f.js
+    end
   end
   
   def create
