@@ -31,6 +31,10 @@ td {
   text-align: center;
 }
 
+tr {
+  cursor: pointer;
+}
+
 #value-desc {
   text-align: left;
   font-style: italic;
