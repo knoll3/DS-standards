@@ -14,6 +14,7 @@
  *= require_self
  */
 
+
 textarea {
   white-space: pre-wrap;
 }
@@ -57,3 +58,4 @@ img {
   width: 700px;
   height: 775px;
 }
+
