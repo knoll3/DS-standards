@@ -9,6 +9,7 @@
       <% else %>
         <div class="item">
       <% end %>
+      <h3><%= get_name_from image.url %></h3>
         <%= link_to image_tag(prepend_s3(image.url), { alt: image.url, class: "img-responsive" }), 
             'https://framing-helper-bucket-20180320.s3.amazonaws.com/oncor_specs.pdf#page=10', 
             target: :_blank %>
