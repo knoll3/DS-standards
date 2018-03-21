@@ -9,7 +9,7 @@
       <% else %>
         <div class="item">
       <% end %>
-        <%= image_tag(image.url, alt: image.url, class: "img-responsive") %>
+        <%= image_tag prepend_s3(image.url), alt: image.url, class: "img-responsive" %>
       </div>
     <% end %>
   </div>

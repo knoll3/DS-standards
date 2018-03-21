@@ -8,7 +8,7 @@ module FramingsHelper
     !nonuseful_column_names.include?(column_name) 
   end
   
-  def hello
-    return 'Hello, World!'
+  def prepend_s3 url
+    "https://framing-helper-bucket-20180320.s3.amazonaws.com/#{url}"
   end
 end
