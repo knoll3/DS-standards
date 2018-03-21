@@ -11,4 +11,8 @@ module FramingsHelper
   def prepend_s3 url
     "https://framing-helper-bucket-20180320.s3.amazonaws.com/#{url}"
   end
+  
+  def get_name_from url
+    url.scan(/(.+)_/)[0][0].sub('_',' ').upcase
+  end
 end
