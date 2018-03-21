@@ -13,12 +13,22 @@ csv.each do |row|
   t.save 
 end
 
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'images.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
-csv.each do |row|
-  t = Image.new
-  Image.column_names.each do |column_name|
-      t[column_name] = row[column_name] 
-  end
-  t.save 
+def is_company_name name
+  exceptions = %w[id desc created_at updated_at]
+  !(exceptions.include? name)
 end
+
+def valid_value value
+  value != '-'
+end
+
+Framing.all.each do |framing|
+  framing.attributes.each do |key, value|
+    if is_company_name key and valid_value value
+      str = "#{key}_#{value.to_s.downcase}.jpg"
+      image = Image.new(url: str, framing_id: framing.id)
+      image.save 
+    end
+  end
+end 
+
