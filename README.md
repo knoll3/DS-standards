@@ -24,4 +24,9 @@ Things you may want to cover:
 * ...
 # framing-helper
 
-Working on images in production.
+To do:
+-Images in production version should be in order
+-Should be able to erase search contents with x button
+-Images should link to specific page in pdf
+-Table headers should be static
+

@@ -32,3 +32,14 @@ Framing.all.each do |framing|
   end
 end 
 
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'page_numbers.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+  url = "coserv_#{row["framing"]}.jpg"
+  image = Image.find_by url: url
+  image.href = "#page=#{row[1]}"
+  image.save
+end
+
+images = Image.all
+images.each { |image| puts image.attributes }
