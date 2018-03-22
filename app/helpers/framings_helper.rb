@@ -12,12 +12,12 @@ module FramingsHelper
     "https://framing-helper-bucket-20180320.s3.amazonaws.com/#{url}"
   end
   
-  def build_standards_href file_path, page_href = nil
+  def build_standards_href file_path, page = nil
     href = ''
     bucket = "framing-helper-bucket-20180320"
     href = "https://#{bucket}.s3.amazonaws.com/standards/#{file_path}"
-    if page_href
-      href += page_href
+    if page
+      href += "#page=#{page}"
     end
     return href
   end

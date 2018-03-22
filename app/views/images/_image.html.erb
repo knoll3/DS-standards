@@ -10,9 +10,10 @@
         <div class="item">
       <% end %>
       <h3><%= get_name_from image.url %></h3>
-      <p><%= image.href %></p>
-        <%= link_to image_tag(prepend_s3(image.url), { alt: image.url, class: "img-responsive" }), 
-            build_standards_href('coserv_standards_va-vc.pdf', image.href), 
+      <p><%= image.page %></p>
+        <%= link_to image_tag(prepend_s3(image.url), { alt: image.url, 
+                                                     class: "img-responsive" }), 
+            build_standards_href('coserv_standards_va-vc.pdf', image.page), 
             target: :_blank %>
       </div>
     <% end %>

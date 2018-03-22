@@ -37,7 +37,7 @@ csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
   url = "coserv_#{row["framing"]}.jpg"
   image = Image.find_by url: url
-  image.href = "#page=#{row[1]}"
+  image.page = row[1]
   image.save
 end
 
