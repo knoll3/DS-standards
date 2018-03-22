@@ -12,7 +12,7 @@
       <h3><%= get_name_from image.url %></h3>
       <p><%= image.href %></p>
         <%= link_to image_tag(prepend_s3(image.url), { alt: image.url, class: "img-responsive" }), 
-            "https://framing-helper-bucket-20180320.s3.amazonaws.com/coserv_standards.pdf#{image.href}", 
+            build_standards_href('coserv_standards_va-vc.pdf', image.href), 
             target: :_blank %>
       </div>
     <% end %>
