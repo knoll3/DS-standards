@@ -11,7 +11,7 @@
   <tr>
     <% Framing.column_names.each do |column_name| %>
       <% if is_useful_column_name column_name %>
-        <th><%= column_name %></th>
+        <th><%= beautify_name column_name %></th>
       <% end %>
     <% end %>
   </tr>
