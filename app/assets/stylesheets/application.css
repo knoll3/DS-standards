@@ -23,11 +23,6 @@ textarea {
   text-align: center;
 }
 
-#table-wrapper {  
-    height: 700px !important;
-    overflow-y: scroll;
-}
-
 .column-title {
   text-align: center;
   
@@ -35,6 +30,45 @@ textarea {
 
 #myCarousel {
   margin: 0 auto;
+}
+
+table {
+  border: 0;
+  border-collapse: collapse;
+}
+
+table tr {
+  display: flex;
+}
+
+table td {
+  padding: 3px;
+  flex: 1 auto;
+  border: 1px solid #aaa;
+  width: 1px;
+  word-wrap: break;
+}
+
+table thead tr:after {
+  content: '';
+  overflow-y: scroll;
+  visibility: hidden;
+  height: 0;
+}
+
+table thead th {
+  flex: 1 auto;
+  display: block;
+  border: 1px solid #000;
+  width: 2%;
+  text-align: center;
+}
+
+table tbody {
+  display: block;
+  width: 100%;
+  overflow-y: auto;
+  height: 700px;
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
@@ -89,13 +123,17 @@ img {
   color: #337ab7;
 }
 
+#pdf_button {
+  margin-left: 25px;
+}
+
 .footer {
   text-align: center;
   background: #eee;
   color: black;
   padding-top: 25px;
   padding-bottom: 75px;
-  margin: 25px;
+  margin-top: 25px;
 }
 
 .footer li {

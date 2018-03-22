@@ -1,4 +1,4 @@
-
+      
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
   <!-- Wrapper for slides -->
@@ -9,10 +9,9 @@
       <% else %>
         <div class="item">
       <% end %>
-      <h3><span><%= get_name_from image.url %></span>
-          <span><%= link_to "Full PDF", build_standards_href(image.url), 
+      <h3><span id="pages_title"><%= get_name_from image.url %></span>
+          <span id="pdf_button"><%= link_to "Full PDF", build_standards_href(image.url), 
              class:  "btn btn-primary btn-large",
-             id:     "pdf-button",
              target: :_blank %>
           </span>
       </h3>

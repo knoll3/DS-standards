@@ -30,4 +30,8 @@ module FramingsHelper
   def get_name_from url
     url.scan(/(.+)_/)[0][0].sub('_',' ').upcase
   end
+
+  def beautify_name company_name
+    company_name.sub('_',' ').upcase
+  end
 end
