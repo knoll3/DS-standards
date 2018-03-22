@@ -13,7 +13,7 @@
       <p><%= image.page %></p>
         <%= link_to image_tag(prepend_s3(image.url), { alt: image.url, 
                                                      class: "img-responsive" }), 
-            build_standards_href('coserv_standards_va-vc.pdf', image.page), 
+            build_standards_href(image.url, image.page), 
             target: :_blank %>
       </div>
     <% end %>
