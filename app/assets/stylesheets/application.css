@@ -19,6 +19,10 @@ textarea {
   white-space: pre-wrap;
 }
 
+.jumbotron {
+  text-align: center;
+}
+
 #table-wrapper {  
     height: 700px !important;
     overflow-y: scroll;
@@ -26,6 +30,7 @@ textarea {
 
 .column-title {
   text-align: center;
+  
 }
 
 #myCarousel {
@@ -59,6 +64,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
     width: 550px; 
     box-shadow: 2px 2px 2px 2px grey;
  }
@@ -83,3 +89,20 @@ img {
   color: #337ab7;
 }
 
+.footer {
+  text-align: center;
+  background: #eee;
+  color: black;
+  padding-top: 25px;
+  padding-bottom: 75px;
+  margin: 25px;
+}
+
+.footer li {
+  list-style-type: none;
+}
+
+.footer li a {
+  text-decoration: none;
+  color: black;
+}
