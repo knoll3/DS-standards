@@ -10,10 +10,13 @@
         <div class="item">
       <% end %>
       <h3><%= get_name_from image.url %></h3>
-      <p><%= image.page %></p>
+      <p><%= link_to "Full PDF", build_standards_href(image.url), 
+             class: "btn btn-primary btn-large",
+             target: :_blank %>
+      </p>
         <%= link_to image_tag(prepend_s3(image.url), { alt: image.url, 
                                                      class: "img-responsive" }), 
-            build_standards_href(image.url, image.page), 
+            '#', 
             target: :_blank %>
       </div>
     <% end %>
