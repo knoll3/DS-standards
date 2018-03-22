@@ -18,20 +18,8 @@ module FramingsHelper
     # Get company name
     company_name = image_url.scan(/(.+)_/)[0][0]
     
-    # Get section
-    case company_name
-    when 'coserv'
-      section = image_url.scan(/.+_([a-z]+)/)[0][0]
-    when 'trinity_valley'
-      section = image_url.scan(/.+_([a-z]+)/)[0][0]
-    when 'tnmp'
-      section = image_url.scan(/.+_(.+)-/)[0][0]
-    when 'oncor'
-      section = image_url.scan(/.+_(\d{3})/)[0][0]
-    end
-
     # Build href
-    file_path = "#{company_name}_#{section}.pdf"
+    file_path = "#{company_name}.pdf"
     href = "https://#{bucket}.s3.amazonaws.com/standards/#{file_path}"
     if page
       href += "#page=#{page}"
