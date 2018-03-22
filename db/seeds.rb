@@ -43,3 +43,4 @@ end
 
 images = Image.all
 images.each { |image| puts image.attributes }
+
