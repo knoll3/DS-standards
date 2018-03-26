@@ -34,4 +34,5 @@ module FramingsHelper
   def beautify_name company_name
     company_name.sub('_',' ').upcase
   end
+  
 end

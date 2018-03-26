@@ -71,7 +71,7 @@ table tbody {
   height: 700px;
 }
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+.table-hover:hover {
   background-color: #eee;
 }
 

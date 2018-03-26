@@ -10,6 +10,12 @@ class FramingsController < ApplicationController
     @framings = Framing.all
     @framing  = params[:id] ? Framing.find(params[:id]) : Framing.find(1)
     @images   = @framing.images.all
+    if params[:data_value]
+      @active_url = remove_quotes params[:data_value]
+    else
+      @active_url = "coserv_va1.jpg"
+    end
+
     respond_to do |f|
       f.html
       f.js
@@ -32,5 +38,9 @@ class FramingsController < ApplicationController
   
     def framing_params
       params.require(:framing).permit(:desc, :coserv, :oncor, :tnmp, :trinity_valley)
+    end
+    
+    def remove_quotes str
+      str.gsub(/\"/,'')
     end
 end
