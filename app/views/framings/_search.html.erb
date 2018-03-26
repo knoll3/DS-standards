@@ -23,15 +23,13 @@
         <% framing.attributes.each do |column_name, value| %>
           <% if is_useful_column_name column_name %>
             <td 
-                <% if column_name != 'desc' %>
+                <% if column_name == 'desc' || value == '-' %>
+                  class="col-md-2 table-hover"  
+                <% else %>
                   data-href="<%= framing_path(framing) %>" 
                   data-url="<%= column_name %>_<%= value.to_s.downcase %>.jpg"
                   class="col-md-2 table-hover clickable"
-                <% else %>
-                  class="col-md-2 table-hover"
-                <% end %>
-                
-                id=<%= "value-#{column_name}" %>>
+                <% end %>>
               <%= value %>
             </td>
           <% end %>
