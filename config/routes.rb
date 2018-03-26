@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root 'framings#index'
+  root 'framings#show'
   resources :framings
 end
