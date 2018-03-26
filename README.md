@@ -25,11 +25,11 @@ Things you may want to cover:
 # framing-helper
 
 To do:
-  * Images in production version should be in order
+  * ✔ Images in production version should be in order
   * Should be able to erase search contents with x button
   * ✔ Images should link to specific page in pdf
   * ✔ Table headers should be static
-  * Headers should line up when scroll bar disappears
+  * ✔ Headers should line up when scroll bar disappears
   * Add tests
   * Hitting enter on search bar should do nothing
 
