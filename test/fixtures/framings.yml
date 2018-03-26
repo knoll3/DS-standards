@@ -1,15 +1,2 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  desc: MyText
-  coserv: MyString
-  oncor: MyString
-  tnmp: MyString
-  trinity_valley: MyString
-
-two:
-  desc: MyText
-  coserv: MyString
-  oncor: MyString
-  tnmp: MyString
-  trinity_valley: MyString
