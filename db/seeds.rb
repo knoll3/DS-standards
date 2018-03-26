@@ -23,9 +23,9 @@ def valid_value value
 end
 
 Framing.all.each do |framing|
-  framing.attributes.each do |key, value|
-    if is_company_name key and valid_value value
-      str = "#{key}_#{value.to_s.downcase}.jpg"
+  framing.attributes.each do |name, framing|
+    if is_company_name name and valid_value framing
+      str = "#{name}_#{framing.to_s.downcase}.jpg"
       image = Image.new(url: str, framing_id: framing.id)
       image.save 
     end
