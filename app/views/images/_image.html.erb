@@ -1,10 +1,9 @@
-      
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <% @images.each_with_index do |image, index| %>
-      <% if index == 0 %>
+      <% if image.url == @active_url %>
         <div class="item active">
       <% else %>
         <div class="item">

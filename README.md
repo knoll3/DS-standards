@@ -31,4 +31,5 @@ To do:
   * ✔ Table headers should be static
   * Headers should line up when scroll bar disappears
   * Add tests
+  * Hitting enter on search bar should do nothing
 

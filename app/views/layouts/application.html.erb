@@ -10,12 +10,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script>
-      $(document).on('click', 'tr', function() {
+      // Loading images
+      $(document).on('click', 'td', function() {
+        var active_url = $(this).data('url');
         var link = $(this).data('href');
         $.ajax({
           type: 'GET',
           dataType: 'script',
-          url: link
+          url: link,
+          data: { data_value: JSON.stringify(active_url) }
         });
       });
     </script>
@@ -80,6 +83,7 @@
 
   
   <script>
+    // Search bar
     $(document).ready(function(){
       $("#myInput").on("keyup", function() {
         var value = $(this).val().toLowerCase();
@@ -88,6 +92,7 @@
         });
       });
     });
+    
   </script>
   </body>
 </html>
