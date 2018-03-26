@@ -8,7 +8,7 @@ class FramingsController < ApplicationController
 
   def show
     @framings = Framing.all
-    @framing  = Framing.find(params[:id]) 
+    @framing = params[:id] ? Framing.find(params[:id]) : Framing.find(1)
     @images   = @framing.images.all
     respond_to do |f|
       f.html
