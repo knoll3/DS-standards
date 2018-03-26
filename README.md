@@ -26,7 +26,7 @@ Things you may want to cover:
 
 To do:
   * ✔ Images in production version should be in order
-  * Should be able to erase search contents with x button
+  * ✔ Ihould be able to erase search contents with x button
   * ✔ Images should link to specific page in pdf
   * ✔ Table headers should be static
   * ✔ Headers should line up when scroll bar disappears
