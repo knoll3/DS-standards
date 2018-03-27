@@ -14,7 +14,7 @@
  *= require_self
  */
 
-
+/*Custom scrollbar*/
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 7px;
@@ -40,6 +40,15 @@ textarea {
 
 #myCarousel {
   margin: 0 auto;
+}
+
+input {
+  color: transparent !important;
+  text-shadow: 0 0 0 black !important;
+
+  &:focus {
+      outline: none !important;
+  }
 }
 
 table {

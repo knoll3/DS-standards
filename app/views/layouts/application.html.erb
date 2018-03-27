@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script>
       // Loading images
       $(document).on('click', 'td.clickable', function() {
@@ -26,62 +26,16 @@
   </head>
 
   <body>  
+  
   <div class="container-fluid">
-    <div class="row">
-    <div class="col-md-12">
-      
-      <!--Header-->
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">Framing Helper</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-          </ul>
-        </div>
-      </nav>
-     
-
-    </div>
-    </div>
-    
-    
-    <div class="col-md-6">
-      <!--Jumbotron -->
-      <div class="jumbotron">
-        <h2>Search Framing</h2>
-        <p>Type a framing unit into the search bar.</p>
-      </div> 
-      
-      <%= render 'search' %>    
-    </div> 
-    
-    <div class="col-md-6">
-      <!--Jumbotron -->
-      <div class="jumbotron">
-        <h2>Pages</h2>
-        <p>Scroll with the arrows to see the standards of other companies.</p>
-      </div> 
-      <div id="main">
-        <%= yield %>
-      </div>
-    </div>
+    <%= render 'header' %>
+    <%= render 'search' %>    
+    <%= yield %>
   </div>
     
-    <!--Footer-->
-
   <div class="footer" style="text-align:center">
-    <div class="row">
-      <div class="col-md-6" style="text-align:left; padding-left: 50px;">
-      <h3>Framing Helper</h3>  
-      <p>Questions?<br>
-         Contact Kyle Noll: knoll@ucseng.com</p>
-      </div>
-    </div>
+    <%= render 'footer' %>
   </div>
-
-
   
   <script>
     // Search bar
@@ -103,8 +57,7 @@
         }
       });
     }); 
-        
-    
   </script>
+  
   </body>
 </html>
