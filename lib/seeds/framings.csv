@@ -64,7 +64,7 @@ vertical
 double deadend",VA6,108-240,OH-6-125,VA6-1
 "single phase
 double deadend with guy
-long span feeder crossing",-,108-825,,
+long span feeder crossing",-,108-825,-,-
 "single phase
 crossarm
 deadend",VA7,-,-,VA7
@@ -81,7 +81,7 @@ reduced tension deadend",VA7S,-,-,-
 "single phase
 crossarm
 dead takeoff for
-span with tension (no pins)",,-,-,VA7X
+span with tension (no pins)",-,-,-,VA7X
 "single phase
 crossarm
 dead takeoff for
@@ -216,7 +216,7 @@ crossarm
 deadend - less neutral",VB7-LN,-,-,-
 "two phase
 three crossarm
-deadend - retire only",VB7-1-R,-,-,VAB7-1
+deadend - retire only",VB7-1-R,-,-,VB7-1
 "two phase
 crossarm
 deadend - retire only",VB7A-R,-,-,-
@@ -230,7 +230,7 @@ span with tension",VB7X,-,-,VB7X
 "two phase
 crossarm with pin insulators
 deadend takeoff for
-span with tension","VB7X, VM5-5",-,-,VB7X-1
+span with tension",VB7X,-,-,VB7X-1
 "two phase
 crossarm
 deadend takeof for 
@@ -245,7 +245,7 @@ deadend takeoff for span
 with reduced tension - less neutral",VB7XS-LN,-,-,-
 "two phase
 crossarm
-double deadend","VB7, VB7X",-,-,VB8
+double deadend",VB7X,-,-,VB8
 "two phase
 crossarm 
 double primary support",VB9,-,-,VB9
@@ -498,7 +498,7 @@ span with reduced tension",VC7XS,-,-,-
 "three phase
 crossarm
 deadend takeoff for
-span with reduced tension","VC7, VC7XS",108-365,OH-6-255,-
+span with reduced tension",VC7XS,108-365,OH-6-255,-
 "three phase
 crossarm
 deadend tap for  span
@@ -513,7 +513,7 @@ double deadend
 with guy",-,108-835,-,-
 "three phase
 crossarm
-3ph tap with tension","VC1, VC7",108-350,OH-6-235,-
+3ph tap with tension",VC7,108-350,OH-6-235,-
 "three phase
 crossarm
 3ph tap with reduced tension",-,108-360,OH-6-250,-
@@ -568,8 +568,6 @@ double primary support",VC33-7,108-375,-,-
 "electrode pole top
 and gap system for 
 crossarm consctruction",-,108-372,-,-
-"crossarm construction
-floating taps",???,108-380,-,-
 "three phase
 shield crossarm
 tangent",-,108-705,OH-6-510,-
