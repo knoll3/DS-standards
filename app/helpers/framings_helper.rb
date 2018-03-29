@@ -35,4 +35,16 @@ module FramingsHelper
     company_name.sub('_',' ').upcase
   end
   
+  def is_company_name name
+    noncompany_names = %w[ id
+                           created_at
+                           updated_at
+                           desc
+                         ]
+    !noncompany_names.include?(name)
+  end
+  
+  def is_blank value
+    value == '-'
+  end
 end

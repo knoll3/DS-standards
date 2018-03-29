@@ -1,9 +1,13 @@
 <div class="col-md-6">
+  
+<!--Jumbotron-->
 <div class="jumbotron">
   <h2>Search Framing</h2>
   <p>Type a framing unit into the search bar.</p>
 </div> 
+<!--/Jumbotron-->
 
+<!--Search bar-->
 <form>
   <div class="input-group">
     <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
@@ -13,6 +17,9 @@
   </div>
 </form>
 <br>
+<!--/Search bar-->
+
+<!--Table-->
 <div id="table-wrapper">
 <table class="table table-bordered table-striped" id="table">
 <thead>
@@ -30,9 +37,10 @@
         <% framing.attributes.each do |column_name, value| %>
           <% if is_useful_column_name column_name %>
             <td 
-                <% if column_name == 'desc' || value == '-' %>
+                <% if (is_company_name(column_name) == false) || (is_blank(value)) %>
                   class="col-md-2 table-hover"  
                 <% else %>
+                  <%# Make the cell clickable %>
                   data-href="<%= framing_path(framing) %>" 
                   data-url="<%= column_name %>_<%= value.to_s.downcase %>.jpg"
                   class="col-md-2 table-hover clickable"
@@ -46,4 +54,6 @@
 </tbody>
 </table>
 </div>
+<!--/Table-->
+
 </div>
