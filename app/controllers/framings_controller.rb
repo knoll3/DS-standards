@@ -20,6 +20,7 @@ class FramingsController < ApplicationController
       f.html
       f.js
     end
+    @company = Company.first
   end
   
   private
@@ -27,7 +28,7 @@ class FramingsController < ApplicationController
     def framing_params
       params.require(:framing).permit(:desc, :coserv, :oncor, :tnmp, :trinity_valley)
     end
-    
+
     def remove_quotes str
       str.gsub(/\"/,'')
     end

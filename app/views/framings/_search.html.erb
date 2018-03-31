@@ -4,6 +4,14 @@
 <div class="jumbotron">
   <h2>Search Framing</h2>
   <p>Type a framing unit into the search bar.</p>
+  <p>name: <%= @company.name %><br>
+     visible: <%= @company.visible %></p>
+  <%= form_for(@company) do |f| %>
+    <%= label :visible, @company.name %>
+    <%= f.check_box :visible %>
+
+    <%= f.submit %>
+  <% end %>
 </div> 
 <!--/Jumbotron-->
 
