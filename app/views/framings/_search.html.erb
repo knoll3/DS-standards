@@ -25,7 +25,7 @@
 <thead>
   <tr>
     <% Framing.column_names.each do |column_name| %>
-      <% if is_useful_column_name column_name %>
+      <% if goes_in_column column_name %>
         <th><%= beautify_name column_name %></th>
       <% end %>
     <% end %>
@@ -35,7 +35,7 @@
   <% @framings.each do |framing| %>
       <tr>
         <% framing.attributes.each do |column_name, value| %>
-          <% if is_useful_column_name column_name %>
+          <% if goes_in_column column_name %>
             <td 
                 <% if (is_company_name(column_name) == false) || (is_blank(value)) %>
                   class="col-md-2 table-hover"  

@@ -31,6 +31,10 @@ module FramingsHelper
     url.scan(/(.+)_/)[0][0].sub('_',' ').upcase
   end
 
+  def get_raw_name_from url 
+    url.scan(/(.+)_/)[0][0]
+  end
+
   def beautify_name company_name
     company_name.sub('_',' ').upcase
   end
@@ -46,5 +50,15 @@ module FramingsHelper
   
   def is_blank value
     value == '-'
+  end
+
+  def goes_in_column column_name
+    if column_name == 'desc'
+      return true
+    else
+      if is_company_name column_name
+       return Company.find_by(name: column_name).visible
+      end 
+    end
   end
 end
