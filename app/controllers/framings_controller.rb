@@ -20,7 +20,7 @@ class FramingsController < ApplicationController
       f.html
       f.js
     end
-    @company = Company.first
+    @companies = Company.all
   end
   
   private
