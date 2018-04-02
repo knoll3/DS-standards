@@ -22,6 +22,7 @@ class FramingsController < ApplicationController
     end
     @companies = Company.all
   end
+
   
   private
   

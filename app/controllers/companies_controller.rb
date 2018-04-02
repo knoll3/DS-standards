@@ -1,13 +1,17 @@
 class CompaniesController < ApplicationController
+  
   def update
-    company = Company.find(params[:id])
-    company.update_attributes(company_params)
+    params["companies"].each do |id, data|
+      company = Company.find(id)
+      company.update_attributes(permit_data data)
+    end 
     redirect_to root_path
   end
-
+  
   private
-
-    def company_params
-      params.require(:company).permit(:name, :visible)
+  
+    def permit_data data
+      data.permit(:visible)
     end
+    
 end
