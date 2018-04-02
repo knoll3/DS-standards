@@ -62,6 +62,14 @@
         }
       });
     }); 
+    
+    // Expandable button
+    $('#expand-button').click(function(){
+      $('#expand-text').text(function(i,old){
+        return old=='+' ?  '-' : '+';
+      })
+    });  
+  
   </script>
   
   </body>

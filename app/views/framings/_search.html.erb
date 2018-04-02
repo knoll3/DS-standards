@@ -2,27 +2,34 @@
   
 <!--Jumbotron-->
 <div class="jumbotron">
-  <h2>Search Framing</h2>
-  <p>Type a framing unit into the search bar.</p>
-
-  <%= form_tag(companies_update_path, {:method => :get, :id => "company-filter"}) do %>
-    <% @companies.each do |company| %>
-      <%= fields_for 'companies[]', company do |f| %>
-        <div class="field">
-          <%= f.check_box :visible %>
-          <%= f.label company.name %>
-        </div>
-      <% end %>
-    <% end %>
-    <div class="actions">
-      <%= submit_tag "Apply" %>
-    </div>
-  <% end %>
-    
-  
-  
+  <h2>Framing Units</h2>
+  <p>Search for a framing unit.</p>
 </div> 
 <!--/Jumbotron-->
+
+
+  <div id="company-filter">
+  <button id="expand-button" type="button" class="btn btn-primary" 
+          data-toggle="collapse" data-target="#filter-list">
+            Company Filter <span id="expand-text">+</span>
+  </button>
+  <div id="filter-list" class="well collapse">
+    <%= form_tag(companies_update_path, {:method => :get}) do %>
+      <% @companies.each do |company| %>
+        <%= fields_for 'companies[]', company do |f| %>
+          <div class="field">
+            <%= f.check_box :visible %>
+            <%= f.label company.name %>
+          </div>
+        <% end %>
+      <% end %>
+      <div class="actions">
+        <%= submit_tag "Apply", class: "btn btn-primary", id: "filter-apply-button" %>
+      </div>
+    <% end %>
+  </div>
+  </div>
+
 
 <!--Search bar-->
 <form>

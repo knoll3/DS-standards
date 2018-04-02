@@ -30,6 +30,24 @@ textarea {
   margin: 0 auto;
 }
 
+#company-filter {
+  margin-bottom: 15px;
+}
+
+#expand-button {
+  margin-bottom: 15px;
+}
+
+#filter-list {
+  padding: 15px;
+}
+
+
+
+#filter-apply-button {
+  color: white !important;
+}
+
 input {
   color: transparent !important;
   text-shadow: 0 0 0 black !important;
@@ -118,6 +136,7 @@ img {
 #myCarousel {
   width: 700px;
   height: 800px;
+  margin-top: 120px;
 }
 
 .carousel-control {
