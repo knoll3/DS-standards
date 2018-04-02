@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180330182333) do
+ActiveRecord::Schema.define(version: 20180402190026) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20180330182333) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "page"
+    t.string "section"
+    t.string "company"
     t.index ["framing_id"], name: "index_images_on_framing_id"
   end
 
