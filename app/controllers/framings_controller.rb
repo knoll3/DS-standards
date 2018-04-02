@@ -11,11 +11,11 @@ class FramingsController < ApplicationController
         @images << image
       end
     end
-    if params[:active_url]
-      @active_url = remove_quotes(params[:active_url])
-    else
-      @active_url = @images.first.url
+    
+    if @images != []
+      @active_url = params[:active_url] ? remove_quotes(params[:active_url]) : @images.first.url
     end
+
     respond_to do |f|
       f.html
       f.js

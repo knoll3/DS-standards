@@ -1,6 +1,7 @@
 class CompaniesController < ApplicationController
   
   def update
+    # Need to add indices to model
     params["companies"].each do |id, data|
       company = Company.find(id)
       company.update_attributes(permit_data data)

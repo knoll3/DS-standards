@@ -5,17 +5,17 @@
   <h2>Search Framing</h2>
   <p>Type a framing unit into the search bar.</p>
 
-  <%= form_tag(companies_update_path, {:method => :get}) do %>
+  <%= form_tag(companies_update_path, {:method => :get, :id => "company-filter"}) do %>
     <% @companies.each do |company| %>
       <%= fields_for 'companies[]', company do |f| %>
         <div class="field">
-          <%= f.label company.name %>
           <%= f.check_box :visible %>
+          <%= f.label company.name %>
         </div>
       <% end %>
     <% end %>
     <div class="actions">
-      <%= submit_tag %>
+      <%= submit_tag "Apply" %>
     </div>
   <% end %>
     
