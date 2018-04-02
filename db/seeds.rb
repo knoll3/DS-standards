@@ -12,6 +12,12 @@ def valid_value value
   value != '-'
 end
 
+def get_raw_name_from url 
+  url.scan(/(.+)_/)[0][0]
+end
+
+# --------------------
+
 # Seed framings
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'framings.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
@@ -50,6 +56,11 @@ Company.create(name: 'oncor', visible: true)
 Company.create(name: 'tnmp', visible: true)
 Company.create(name: 'trinity_valley', visible: true)
 
+# Seed companies into images
 images = Image.all
-images.each { |image| puts image.attributes }
+images.each do |image|
+  image.company = image.url.scan(/(.+)_/)[0][0]
+  image.save
+end
+
 
