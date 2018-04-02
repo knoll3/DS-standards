@@ -3,6 +3,16 @@
 
 require 'csv'
 
+def is_company_name name
+  exceptions = %w[id desc created_at updated_at]
+  !(exceptions.include? name)
+end
+
+def valid_value value
+  value != '-'
+end
+
+# Seed framings
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'framings.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
@@ -13,15 +23,7 @@ csv.each do |row|
   t.save 
 end
 
-def is_company_name name
-  exceptions = %w[id desc created_at updated_at]
-  !(exceptions.include? name)
-end
-
-def valid_value value
-  value != '-'
-end
-
+# Seed images
 Framing.all.each do |framing|
   framing.attributes.each do |key, value|
     if is_company_name key and valid_value value
@@ -32,6 +34,7 @@ Framing.all.each do |framing|
   end
 end 
 
+# Seed page numbers
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'page_numbers.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
@@ -40,6 +43,12 @@ csv.each do |row|
   image.page = row[1]
   image.save
 end
+
+# Seed companies
+Company.create(name: 'coserv', visible: true)
+Company.create(name: 'oncor', visible: true)
+Company.create(name: 'tnmp', visible: true)
+Company.create(name: 'trinity_valley', visible: true)
 
 images = Image.all
 images.each { |image| puts image.attributes }
