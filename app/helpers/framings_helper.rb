@@ -61,4 +61,10 @@ module FramingsHelper
       end 
     end
   end
+  
+  def create_pdf_link image
+    bucket = "framing-helper-bucket-20180320"
+    base_url = "https://s3.us-east-2.amazonaws.com/#{bucket}/standards/"
+    "#{base_url}#{image.company}_#{image.section}.pdf#page=#{image.page}"
+  end
 end
