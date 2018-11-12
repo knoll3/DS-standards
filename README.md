@@ -1,38 +1,41 @@
-# README
+# DS-standards
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+DS-standards is one of the first web applications I made after discovering a need for increated efficiency within my company. It's a single page instantaneous web application that demonstrates the power of Javascript. 
+In addtion to the usage of Ruby on Rails, this app also demonstrates the usage of:
+- HTML/CSS
+- Bootstrap
+- AWS S3 Buckets
 
-Things you may want to cover:
+Visit [DS-standards](https://ds-standards-kyle-noll.herokuapp.com/) on Heroku.
 
-* Ruby version
 
-* System dependencies
+## Getting Started
 
-* Configuration
+Clone the app and install the gem files
+```
+$ git clone git@github.com:knoll3/DS-standards.git
+$ cd DS-standards/
+$ bundle install
+```
+After this you should be good to go!
 
-* Database creation
+## Deployment
+To deploy this app into development 
+```
+$ heroku create choose-app-name
+$ git push heroku master
+```
+View app info
+```
+$ heroku apps:info
+```
+Open the app
+```
+$ heroku open
+```
 
-* Database initialization
+## Versions
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# framing-helper
-
-To do:
-  * ✔ Images in production version should be in order
-  * ✔ Ihould be able to erase search contents with x button
-  * ✔ Images should link to specific page in pdf
-  * ✔ Table headers should be static
-  * ✔ Headers should line up when scroll bar disappears
-  * ✔ Hitting enter on search bar should do nothing
-
-  * Add tests
-  * Turn images into GIF's 
-  * 
-
+DS-standards uses 
+- Ruby 2.3.4
+- Rails 5.1.4
