@@ -1,6 +1,6 @@
 # DS-standards
 
-DS-standards is one of the first web applications I made after discovering a need for increated efficiency within my company. It's a single page instantaneous web application that demonstrates the power of Javascript. 
+DS-standards is one of the first web applications I made after discovering a need for increased efficiency within my company. It's a single page instantaneous web application that demonstrates the power of Javascript. 
 In addtion to the usage of Ruby on Rails, this app also demonstrates the usage of:
 - HTML/CSS
 - Bootstrap
