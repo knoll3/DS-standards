@@ -11,9 +11,10 @@
 <div id="company-filter">
 <button id="expand-button" type="button" class="btn btn-primary" 
         data-toggle="collapse" data-target="#filter-list">
-          Company Filter <span id="expand-text">+</span>
+          Company Filter<span id="expand-text">+</span>
 </button>
 <div id="filter-list" class="well collapse">
+  <b>***NOT FUNCTIONING***</b>
   <%= form_tag(companies_update_path, {:method => :get}) do %>
     <% @companies.each do |company| %>
       <%= fields_for 'companies[]', company do |f| %>
@@ -48,36 +49,40 @@
 <table class="table table-bordered table-striped" id="table">
 <thead>
   <tr>
-    <% Framing.column_names.each do |column_name| %>
-      <% if goes_in_column column_name %>
-        <th><%= beautify_name column_name %></th>
-      <% end %>
+    <th>DESC</th>
+    <% @companies.each do |company| %>
+      <th><%= company.name %></th>
     <% end %>
   </tr>
 </thead>
+
 <tbody id="myTable">
-  <% @framings.each do |framing| %>
-      <tr>
-        <% framing.attributes.each do |column_name, value| %>
-          <% if goes_in_column column_name %>
-            <td 
-                <% if (is_company_name(column_name) == false) || (is_blank(value)) %>
-                  class="col-md-2 table-hover"  
-                <% else %>
-                  <%# Make the cell clickable %>
-                  data-href="<%= framing_path(framing) %>" 
-                  data-url="<%= column_name %>_<%= value.to_s.downcase %>.jpg"
-                  class="col-md-2 table-hover clickable"
-                <% end %>>
-              <%= value %>
-            </td>
+  <% row_count = get_row_count %>
+  <% row_count.times do |row_number| %>
+    <tr>
+      <% framings_this_row = @framings.where(row: row_number) %>
+      <td class="col-md-2"><%= framings_this_row.first.desc %></td>
+      <% @companies.each do |company| %>
+        <% framing = framings_this_row.find_by(owner: company.name) %>
+          <% if framing %>
+            <td class="col-md-2 table-hover clickable"
+                data-href="<%= framing_path(framing) %>"
+                data-url="<%= framing.owner %>_<%= framing.standard_number.to_s.downcase %>.jpg">
+                <%= framing.standard_number %>
+            </td>        
+          <% else %>
+            <td class="col-md-2">-</td>
           <% end %>
-        <% end %>
-      </tr>
+      <% end %>
+    </tr>
   <% end %>
 </tbody>
+
 </table>
 </div>
 <!--/Table-->
 
 </div>
+
+
+

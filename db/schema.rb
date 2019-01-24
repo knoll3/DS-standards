@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190124190044) do
+ActiveRecord::Schema.define(version: 20190124205513) do
 
   create_table "companies", force: :cascade do |t|
     t.string "name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20190124190044) do
     t.string "owner"
     t.string "standard_number"
     t.string "row"
+    t.index ["row"], name: "index_framings_on_row"
   end
 
   create_table "images", force: :cascade do |t|

@@ -3,6 +3,7 @@ class FramingsController < ApplicationController
 
   def show
     @framings = Framing.all
+    @companies = Company.all
     if params[:id]
       @framing = Framing.find(params[:id])
     else

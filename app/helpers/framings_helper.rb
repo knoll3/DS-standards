@@ -38,6 +38,17 @@ module FramingsHelper
   def beautify_name company_name
     company_name.sub('_',' ').upcase
   end
+
+  def get_row_count 
+    count = 0
+    Framing.all.each do |framing|
+      framing_row = framing.row.to_i 
+      if framing_row > count
+        count = framing_row
+      end
+    end  
+    return count
+  end
   
   def is_company_name name
     noncompany_names = %w[ id
