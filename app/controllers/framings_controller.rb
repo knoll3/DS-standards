@@ -3,7 +3,11 @@ class FramingsController < ApplicationController
 
   def show
     @framings = Framing.all
-    @framing  = params[:id] ? Framing.find(params[:id]) : Framing.find(1)
+    if params[:id]
+      @framing = Framing.find(params[:id])
+    else
+      @framing = Framing.find(1)
+    end
     @images = []
     @framing.images.each do |image|
       visible_companies = Company.where(visible: true).map {|company| company.name}
