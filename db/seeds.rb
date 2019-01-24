@@ -56,6 +56,7 @@ Company.create(name: 'coserv', visible: true)
 Company.create(name: 'oncor', visible: true)
 Company.create(name: 'tnmp', visible: true)
 Company.create(name: 'trinity_valley', visible: true)
+Company.create(name: 'trinity_valley', visible: true)
 
 # Seed companies into images
 images = Image.all
